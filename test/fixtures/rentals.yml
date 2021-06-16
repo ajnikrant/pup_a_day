@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cost: 1
+  time: 1
+  puppy_id: 1
+  person_id: 1
+
+two:
+  cost: 1
+  time: 1
+  puppy_id: 1
+  person_id: 1

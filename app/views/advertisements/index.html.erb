@@ -1,0 +1,17 @@
+<div class ="d-flex align-items-center justify-content-center">
+<h1 style="margin: 50px 0;">All Puppies available for rental:</h1>
+</div>
+
+<div class="index-container">
+    <% @advertisements.each do |ad|%>
+        <%if ad.puppy.adoption == nil || ad.puppy.adoption == false %>
+
+        <div class="index-card">
+        <img class="index-img" src="<%= ad.puppy.image%>" alt="<%= ad.puppy.name %>"width="400" height="400">
+        <p class="name"><%= link_to ad.puppy.name, puppy_path(ad.puppy.id)%></p>
+        </div> 
+        <% end %>
+    <% end %>
+</div>
+
+

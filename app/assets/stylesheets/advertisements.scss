@@ -1,0 +1,43 @@
+// Place all the styles related to the advertisements controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+div.index-card {
+  
+    padding: 10px;
+    margin: 20px 5px;
+    text-align: center;
+    border-radius: 60px;
+    width: 30%;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  div.index-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .index-container {
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+  .index-card:hover {
+    background-color: #FFFAF0;
+  }
+  p.name {
+    margin-top: 12px;
+    font-size: 20px;
+  }
+a:link {
+  text-decoration: none ;
+}
+a{
+  color: rgb(95, 90, 90);
+  font-weight:bold;
+}

@@ -1,0 +1,23 @@
+    
+
+    <% if flash[:error]%>
+        <div class="alert alert-danger"><%="Password or Username is incorrect"%></div>
+    <%end%>
+    
+    <section class="form" >
+    <%= form_for :session, url: "/sessions" do |f|%>
+    
+    <div class="col-sm-3">
+    <%=f.label :username, "Username: "%> 
+    <%=f.text_field :username, class:"form-control", placeholder: "username" %> </div><br>
+
+    <div class="col-sm-3">
+    <%=f.label :password, "Password: "%> 
+    <%=f.password_field :password, class:"form-control", placeholder: "password" %></div><br>
+    <br>
+    
+    <div class= "d-grid col-1">
+    <%=f.submit "Login", class:"btn btn-primary" %></div>
+<% end %>
+</section>
+

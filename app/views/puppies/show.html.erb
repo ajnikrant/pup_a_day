@@ -1,0 +1,32 @@
+
+<h1 class="puppy_show">This is <%=@puppy.name%>!</h1>
+
+<img class="show-picture" src="<%= @puppy.image %>" alt="<%= @puppy.name %>" width="280" height="280">
+<section class="details">
+<p><b>Name:</b> <%= @puppy.name%></p>
+<p><b>Breed:</b> <%= @puppy.breed%></p>
+<p><b>Age:</b> <%= @puppy.age%></p>
+<p><b>Shelter Name:</b> <%= @puppy.shelter.name%></p>
+<p><b>Shelter Location:</b> <%= @puppy.shelter.location%></p>
+<p><b>Cute Fact about <%= @puppy.name%>:</b> <%= @puppy.cute_fact%></p>
+
+
+<%flash[:puppy_id]=@puppy.id%>
+<%flash[:puppy_name]=@puppy.name%>
+
+
+<a class="btn btn-outline-secondary btn1" href="/rentals/new">Rent this cutie</a>
+</section>
+
+<footer id="footer">
+    <i class="fab fa-twitter fa-1x" aria-hidden="true"></i>
+    <i class="fab fa-facebook-f fa-1x" aria-hidden="true"></i>
+    <i class="fab fa-instagram fa-1x" aria-hidden="true"></i>
+    <i class="fas fa-envelope fa-1x" aria-hidden="true"></i>
+    <p class="Copyright">© Copyright 2021 PupADay </p>
+
+  </footer>
+
+
+
+

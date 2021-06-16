@@ -1,0 +1,68 @@
+// Place all the styles related to the puppies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.show-picture {
+    display: block;
+    margin-right: 250px;
+    float: right;
+    border-radius: 80%;
+}
+
+
+// section.details {
+//     display: block;
+//     text-align: center;
+//     margin-top: 30px;
+//     margin-bottom: 10px;
+// }
+
+h1.puppy_show, section.details {
+    width: 60%;
+    text-align:left;
+    margin: 50px auto;
+    
+}
+// .button {
+//     display: block;
+//     text-align: center;
+//     padding-top: 10px;
+//     padding-bottom: 30px;
+// }
+
+.btn1 {
+    margin-right: 15px;
+    margin-top: 20px;
+    border: 2px solid;
+    transition: color 1s;
+    $color: #778899;
+  color: $color;
+  
+  &:hover {
+    animation: zigzag 1s linear infinite;
+    background: linear-gradient(135deg, rgba($color,0.25) 0.25em, transparent 0.25em) -0.5em 0
+              , linear-gradient(225deg, rgba($color,0.25) 0.25em, transparent 0.25em) -0.5em 0
+              , linear-gradient(315deg, rgba($color,0.25) 0.25em, transparent 0.25em) 0 0
+              , linear-gradient(45deg, rgba($color,0.25) 0.25em, transparent 0.25em) 0 0;
+    background-size: 0.75em 0.75em;
+    color: adjust-hue($color,180);
+  }
+}
+
+@keyframes zigzag {
+  100% {
+    background-position: 1em 0, 1em 0, -0.75em 0 , -0.75em 0;
+  }
+}
+
+.fa-twitter:hover {
+    color: #00acee;
+}
+.fa-facebook-f:hover{
+    color:#3b5998;
+}
+.fa-instagram:hover{
+    color: #e95950;
+}
+.fa-envelope:hover{
+    color: #4285F4;
+}

@@ -1,0 +1,24 @@
+// Place all the styles related to the shelters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.shelter_header {
+    margin:50px 0;
+}
+
+.dog-img { 
+    display: block;
+    border-radius: 50%;
+    margin: 30px auto;
+}
+
+hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.main {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,21 @@
+
+<h1 class ="d-flex align-items-center justify-content-center shelter_header"> Check Out These Success Stories!</h1>
+<h2 class ="d-flex align-items-center justify-content-center shelter_header"> Here are the puppies that PupADay has helped find forever homes!</h2>
+
+
+
+<% @shelters.each do |shelter|%>
+    <%if shelter.puppies.count > 0 %>
+    <%shelter.puppies.each do |puppy|%>
+        <%if puppy.adoption == true%>
+        
+        <h3 class="main">    Shelter Name: <%=puppy.shelter.name%></h3>
+        <img class="dog-img" src="<%=puppy.image%>" alt="adopted puppy" width="333" height="333">
+        <ul><li class="main"><p><b> Puppy:</b> <%=puppy.name%></p></li></ul>
+     
+        <ul><li class="main"><p><b> Adopted By: </b><%=puppy.person.name %></p></li></ul>
+        <hr>
+        <%end%>
+     <%end%>
+     <%end%>
+<%end%>

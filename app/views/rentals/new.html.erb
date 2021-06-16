@@ -1,0 +1,28 @@
+<h1 class="head"> Lets rent a puppy! </h1>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <div class="alert alert-danger"><p><%= error %></p></div>
+  <% end %>
+<% end %>
+<br>
+
+<%= form_for @rental do |f|%>
+      <h4>Puppy to Rent: <%=flash[:puppy_name]%></h4>
+      <br><br>
+      <%= f.label :cost, "Cost Per Hour: " %>
+      $<%= @rental.new_cost %>
+  
+
+      <%= f.hidden_field :puppy_id, value: flash[:puppy_id] %>      
+      <br><br><br>
+
+      <div class="col-sm-2">
+      <%= f.label :time, "Reserve a Time:" %>
+      <%= f.number_field :time, in: 1..24, class:"form-control" %>
+      <br><br>
+     
+<div class= "d-grid col-1">
+    <%=f.submit "Submit", class:"btn btn-outline-secondary btn1" %></div>
+
+<%end%>
