@@ -36,7 +36,7 @@ class RentalsController < ApplicationController
     private
 
     def rental_params
-        params.require(:rental).permit(:puppy_id, :person_id, :time)
+        params.require(:rental).permit(:puppy_id, :person_id, :date)
     end
 
     

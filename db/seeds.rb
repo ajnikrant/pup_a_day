@@ -19,7 +19,7 @@ Rental.reset_pk_sequence
 Advertisement.reset_pk_sequence
 
 10.times do 
-    Shelter.create(name: Faker::Movies::HarryPotter.spell, location: Faker::Movies::HarryPotter.location)
+    Shelter.create(name: Faker::TvShows::Seinfeld.unique.business, location: Faker::Address.unique.city)
 end
 
 # Faker::Internet.username #=> "alexie"
@@ -29,12 +29,12 @@ end
 
 #image !!!
 url = "https://random.dog/woof.json"
-35.times do 
+30.times do 
   res = RestClient.get(url)
   res_body = res.body 
   ruby_hash = JSON.parse(res_body)
   
-  Puppy.create(name: Faker::Creature::Dog.name, breed: Faker::Creature::Dog.breed, age: rand(1..10), cute_fact: Faker::Creature::Dog.meme_phrase, cost: rand(50..100), shelter_id: Shelter.all.sample.id, image: ruby_hash["url"])
+  Puppy.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..10), cost: rand(50..100), shelter_id: Shelter.all.sample.id, image: ruby_hash["url"])
 end
 
 # 20.times do

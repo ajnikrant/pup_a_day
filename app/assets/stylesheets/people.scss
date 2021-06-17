@@ -19,6 +19,7 @@
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    margin-bottom: 200px;
 }
 
     .show-container h4, .upcoming {
@@ -59,7 +60,7 @@
 
     .upcoming { 
         position: relative;
-        // border: 1px solid black;
+        border: 1px solid black;
         grid-area: 1 / 1 / 3 / 3; 
         width: 100%;
         overflow-y: scroll;
@@ -82,7 +83,7 @@
 
 
     .previous { 
-        // border: 1px solid black;
+        border: 1px solid rgb(187, 1, 1);
         grid-area: 3 / 1 / 5 / 3; 
     }
 
@@ -94,7 +95,13 @@
         justify-content: space-evenly;
         align-items: center;
         overflow-y: scroll;
-        // background-color:rgba(170, 252, 255, 0.5);
+        border: 1px solid black;
+
+        background-color:rgba(170, 252, 255, 0.5);
+    }
+
+    .previous-container h4 {
+        text-align: center;
     }
 
     .previous-card {

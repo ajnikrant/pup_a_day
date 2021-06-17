@@ -17,7 +17,7 @@
                         <img class="index-img" src="<%= rental.puppy.image%>" alt="<%= rental.puppy.name %>"width="150" height="150">
                         <ul>
                                 <li class="puppy_name"><%=link_to rental.puppy.name, puppy_path(rental.puppy.id)%><br>
-                                    <p class="rental_time">Rental Time: <%= rental.time%></p>
+                                    <p class="rental_time">Date: <%= rental.date%></p>
                                 </li>
                         </ul>
                    
@@ -35,7 +35,7 @@
 
     <div class= "previous">
     
-    <h4 class="h4"> Your Previous Puppy Rentals: </h4>
+    <h4> Your Previous Puppy Rentals: </h4>
     <div class="previous-container">  
         <%if @person.rentals.count > 0 %>
                 <%@person.rentals.each do |rental|%>
