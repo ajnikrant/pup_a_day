@@ -7,13 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Shelter.destroy_all
-# Person.destroy_all
 Puppy.destroy_all
 Rental.destroy_all
 Advertisement.destroy_all
 
 Shelter.reset_pk_sequence
-Person.reset_pk_sequence
 Puppy.reset_pk_sequence
 Rental.reset_pk_sequence
 Advertisement.reset_pk_sequence
@@ -22,14 +20,10 @@ Advertisement.reset_pk_sequence
     Shelter.create(name: Faker::TvShows::Seinfeld.unique.business, location: Faker::Address.unique.city)
 end
 
-# Faker::Internet.username #=> "alexie"
-# 15.times do
-#     Person.create(name: Faker::Movies::StarWars.character, age: rand(16..70), gender: Faker::Gender.binary_type, username: Faker::Internet.username, email: Faker::Internet.free_email)
-# end
 
 #image !!!
 url = "https://random.dog/woof.json"
-30.times do 
+20.times do 
   res = RestClient.get(url)
   res_body = res.body 
   ruby_hash = JSON.parse(res_body)
@@ -37,13 +31,10 @@ url = "https://random.dog/woof.json"
   Puppy.create(name: Faker::Creature::Dog.unique.name, breed: Faker::Creature::Dog.breed, age: rand(1..10), cost: rand(50..100), shelter_id: Shelter.all.sample.id, image: ruby_hash["url"])
 end
 
-# 20.times do
-#     Rental.create(cost: 0, time: rand(1..24), puppy_id: Puppy.all.sample.id, person_id: Person.all.sample.id)
-# end
 
-30.times do
-    Advertisement.create(shelter_id: Shelter.all.sample.id, puppy_id: Puppy.all.sample.id, info: Faker::Movies::PrincessBride.quote)
-end
+puppyArray = Puppy.all
+
+puppyArray.each {|puppy| Advertisement.create(shelter_id: Shelter.all.sample.id, puppy_id: puppy.id, info: Faker::Movies::PrincessBride.quote)}
 
 puts "Seeded"
 

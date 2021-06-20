@@ -3,10 +3,25 @@
 </div>
 
 <div class = "show-container">
-    <div class = "profile">
-        <h3>Age: <%=@person.age%></h3>
-        <h3>Gender: <%=@person.gender%></h3>
+
+  <div class= "adopted">
+        <h4> Members of your Pack: </h4>
+        <% if @person.puppies.count > 0 %>
+                <%@person.puppies.each do |puppy|%>
+                    <%if puppy.adoption == true%>
+                    <img class="index-img" src="<%= puppy.image%>" alt="<%= puppy.name %>"width="150" height="150">
+                <ul>
+                
+                    <li><%=puppy.name%><br>
+                    </li>
+                </ul>
+                    <%end%>
+                <%end%> <br><br>
+        <%else%>
+            Looks like you havent adopted any puppies... <br><br>
+        <%end%>
     </div>
+
     <div class = "upcoming">
         <h4> Your upcoming Puppy Rentals: </h4>
         <%if @person.rentals.count > 0 %>
@@ -22,11 +37,12 @@
                         </ul>
                    
                         <div class="button_cancel"><%= button_to "Cancel Rental", rental_path(rental.id), method: :delete,data:{confirm:"Sure?"}, class:"btn btn-outline-warning btn_cancel" %>
-                        <%= button_to "Completed!", rental_path(rental.id), method: :patch, class: "btn btn-outline-secondary btn1" %></div>
+                         <%= button_to "Completed!", rental_path(rental.id), method: :patch, class: "btn btn-outline-secondary btn1" %>
+                        </div>
                      </div>    
                     <%end%>
                 <%end%>
-                </div>
+            </div>
 
         <%else%>
             <p class="upcoming">Looks like you dont have any upcoming Puppy Rentals...</p> <br><br>
@@ -59,22 +75,6 @@
         
     </div>
 
-    <div class= "adopted">
-        <h4> Members of your Pack: </h4>
-        <% if @person.puppies.count > 0 %>
-                <%@person.puppies.each do |puppy|%>
-                    <%if puppy.adoption == true%>
-                    <img class="index-img" src="<%= puppy.image%>" alt="<%= puppy.name %>"width="150" height="150">
-                <ul>
-                
-                    <li><%=puppy.name%><br>
-                    </li>
-                </ul>
-                    <%end%>
-                <%end%> <br><br>
-        <%else%>
-            Looks like you havent adopted any puppies... <br><br>
-        <%end%>
-    </div>
+  
 
 </div>
