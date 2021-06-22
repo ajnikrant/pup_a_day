@@ -5,22 +5,12 @@
 #welcome {
     text-align: center;
     font-family: system-ui ;
-    color: yellowgreen;
+    color: rgb(50, 53, 205);
 }
 
 .welcome {
     margin: 50px 0 30px;
-}
-
-.show-container {
-
-}
-
-    .show-container h4, .upcoming {
-        text-align: center;
-        padding: 20px;
-    }   
-    
+}    
     .show-container img{
         border-radius: 50%;
     }
@@ -32,36 +22,55 @@
         text-align: center;
         display: inline-block;
         
-    }
- 
-    .adopted { 
-        border: 1px solid black;
-        height: 300px;
+    }   
+    
+    .h4{
         text-align: center;
-        overflow-y: scroll;
-        background-color:mintcream;
+        padding-bottom: 0;
+        padding-top: 20px;
+        margin-bottom: 0;
+        margin-top:30px
+    }
+// ********* adopted dogs *********
+
+    #v-pills-home{   
+        width: 180%;
     }
 
-    .upcoming { 
-        border: 1px solid rgb(0, 0, 0);
-        height: 400px;
-        margin-top: 50px;
-        padding-top: 15px;
-        width: 100%;
-        overflow-y: scroll;
-        // box-shadow: 5px 5px 4px #888888bb;
-        // box-shadow: 0 8px 4px -4px gray;
-
+    #v-pills-home h4{
+        text-align: center;
+        padding-bottom: 50px;
     }
 
+    .adopted-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .adopted-card {
+        text-align: center; 
+        padding: 10px 20px 10px 20px;
+    }
+
+    .adopted-card li{
+       margin-left: -25px;
+    }
+
+    // ********* upcoming rentals *********
+
+    #v-pills-profile{
+        width: 125%;
+        margin-left: 20px;
+    }
     .upcoming-container {
+        border: solid blueviolet;
         display: flex;
         flex-flow: row wrap;
         width: 100%;
         justify-content: space-evenly;
         align-items: center;
-        overflow-y: scroll;
-        // background-color:mintcream;
     }
 
     .upcoming-card {
@@ -75,7 +84,6 @@
         height: 400px;
         margin-top: 50px;
         margin-bottom: 100px;
-        overflow-y: scroll;
     }
 
     .previous-container {
@@ -86,10 +94,6 @@
         height: 100%;
         justify-content: space-evenly;
         align-items: center;
-        overflow-y: scroll;
-        // border: 1px solid black;
-
-        // background-color:rgba(170, 252, 255, 0.5);
     }
 
     .previous-container h4 {
@@ -105,30 +109,11 @@
         margin-top: -10px;
     }
 
-    li.puppy_name, .adopt_puppy {
-        margin-top:10px;
-        margin-right:20px;
-    }
-
-    p.rental_time {
-        margin-bottom: 0;
-    }
-
     .button_cancel{
         margin-left: 20px;
     }
 
-    .h4{
-        padding-bottom: 0;
-        padding-top: 20px;
-        margin-bottom: 0;
-        margin-top:30px
-
-    }
-
-    .head {
-        margin-top: 50px;
-    }
+ 
   
 
 
