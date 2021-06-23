@@ -6,6 +6,8 @@
     text-align: center;
     font-family: system-ui ;
     color: rgb(50, 53, 205);
+    margin-left: 60px;
+
 }
 
 .welcome {
@@ -29,7 +31,7 @@
         padding-bottom: 0;
         padding-top: 20px;
         margin-bottom: 0;
-        margin-top:30px
+        margin-top:30px;
     }
 // ********* adopted dogs *********
 
@@ -61,58 +63,54 @@
     // ********* upcoming rentals *********
 
     #v-pills-profile{
-        width: 125%;
         margin-left: 20px;
     }
     .upcoming-container {
-        border: solid blueviolet;
         display: flex;
         flex-flow: row wrap;
-        width: 100%;
+        width: 900px;
         justify-content: space-evenly;
         align-items: center;
+        margin-left: 50px;
+        padding-bottom: 50px;
     }
 
     .upcoming-card {
-        width: 30%;
+        width: 25%;
         padding-bottom: 20px;
+        text-align: center; 
+        padding: 10px 20px 10px 20px;
     }
 
-
-    .previous { 
-        border: 1px solid rgb(10, 10, 10);
-        height: 400px;
-        margin-top: 50px;
-        margin-bottom: 100px;
+    .upcoming-card li{
+       margin-left: -25px;
     }
 
-    .previous-container {
-        display: flex;
-        height: 300px;
-        flex-flow: row wrap;
-        width: 100%;
-        height: 100%;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .previous-container h4 {
-        text-align: center;
-    }
-
-    .previous-card {
-        width: 30%;
-        text-align: center;
-        padding-bottom: 20px;
-    }
-    .previous-card .btn{
-        margin-top: -10px;
-    }
-
-    .button_cancel{
+    .btn-outline-secondary.btn1{
         margin-left: 20px;
     }
 
+    // ********* previous rentals *********
+    .previous-container {
+        display: flex;
+        width: 900px;
+        flex-flow: row wrap;
+        padding-bottom: 50px;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .previous-card{
+        width: 25%;
+        padding-bottom: 20px;
+        text-align: center; 
+        padding: 10px 20px 10px 0px;
+    }
+
+    .previous-card li{
+        margin-left: -25px;
+    }
  
   
 
